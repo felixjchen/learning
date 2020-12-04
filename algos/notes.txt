@@ -1,0 +1,8 @@
+https://leetcode.com/problems/house-robber/
+https://leetcode.com/problems/house-robber-ii/discuss/893957/Python-Just-use-House-Robber-twice
+
+https://leetcode.com/explore/challenge/card/october-leetcoding-challenge/561/week-3-october-15th-october-21st/3497/
+
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+https://leetcode.com/explore/challenge/card/october-leetcoding-challenge/561/week-3-october-15th-october-21st/3501/
