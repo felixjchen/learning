@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% COLOR
+\usepackage[dvipsnames]{xcolor}
+
+% PSUEDOCODE
+\usepackage{clrscode3e}
+
+% GRAPHS
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing, shapes, positioning, arrows}
+
+% DERIVATIVES https://tex.stackexchange.com/questions/225523/how-to-write-partial-differential-equation-ex-dq-dt-ds-dt-with-real-partial-d
+\usepackage{physics}
+
+% MARGINS
+\usepackage[left=1in,right=1in]{geometry}
+
+% HEADER FOOTER https://www.overleaf.com/learn/latex/Headers_and_footers
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{chenfeli 1003331628}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+
+\title{TITLE}
+\author{Felix Chen (chenfeli - 1003331628)}
+\date{DD MMM YYYY}
+
+\begin{document}
+
+\maketitle
+\break
+
+\begin{itemize}
+    \item e.g) Graph - Residual graph $G_f$:
+
+    \begin {center}
+        \begin {tikzpicture}[auto, node distance =4 cm and 5cm,
+        semithick,
+        state/.style ={ circle ,top color =white, draw, minimum width =1 cm}]
+        \node[state] (s) at (0, 0)  {$s$};
+        \node[state] (a) at (3, 0)  {$a$};
+        \node[state] (b) at (6, 2)  {$b$};
+        \node[state] (c) at (6, -2) {$c$};
+        % \node[state] (c) at (6, 2)  {$c$};
+        % \node[state] (d) at (6, -2) {$d$};
+        \node[state] (t) at (9, 0)  {$t$};
+
+        \path (a) [-triangle 45] edge node {$1$} (s);
+
+        \path [-triangle 45] (a) edge [bend left=10] node {$0.5$} (b);
+        \path [-triangle 45] (b) edge [bend left=10] node {$0.5$} (a);
+
+        \path [-triangle 45] (b) edge [bend left=10] node {$0.5$} (t);
+        \path [-triangle 45] (t) edge [bend left=10] node {$0.5$} (b);
+
+        \path [-triangle 45] (a) edge [bend left=10] node {$0.5$} (c);
+        \path [-triangle 45] (c) edge [bend left=10] node {$0.5$} (a);
+
+        \path [-triangle 45] (c) edge [bend left=10] node {$0.5$} (t);
+        \path [-triangle 45] (t) edge [bend left=10] node {$0.5$} (c);
+
+        \end{tikzpicture}
+    \end{center}
+\end{itemize}
+\end{document}
